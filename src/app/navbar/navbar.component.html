@@ -1,0 +1,150 @@
+<nav class="navbar navbar-expand-lg bg-light navbar-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">
+      <img
+        src="../../assets/farm.jpg"
+        alt="Logo"
+        width="35"
+        height="30"
+        class="d-inline-block align-text-top background-brand"
+      />
+      {{ brand }}
+    </a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Prodotti
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="/inserisci-prodotto"
+                >Inserisci</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/visualizza-prodotto"
+                >Visualizza</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" routerLink="/cerca-prodotto">Cerca</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Vendite
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="/inserisci-prodotto-venduto"
+                >Inserisci</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/visualizza-prodotto-venduto"
+                >Visualizza</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" routerLink="/cerca-prodotto-venduto">Cerca</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Prescrizioni
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="/inserisci-prescrizione"
+                >Inserisci</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/visualizza-prescrizione"
+                >Visualizza</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" routerLink="/cerca-prescrizione">Cerca</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Clienti
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="/inserisci-cliente"
+                >Inserisci</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" routerLink="/visualizza-cliente"
+                >Visualizza</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <a class="dropdown-item" routerLink="/cerca-cliente">Cerca</a>
+            </li>
+          </ul>
+        </li>
+       <li class="nav-item">
+          <a class="nav-link" routerLink="/dove-info"> Dove & Info</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contatti">Contatti</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
