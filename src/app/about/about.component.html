@@ -1,1 +1,33 @@
-<p>about works!</p>
+<section>
+        <img [src]="about.image" alt="about">
+  <div>
+    <h1>MY FARMACIA</h1>
+  </div>
+</section>
+<br>
+<article>
+  <h2>{{articolo.titolo}}</h2>
+  <p>{{articolo.testo}}</p>
+  <p> La nostra azienda è stata fondata nel 1990 e da allora siamo impegnati a offrire prodotti di qualità superiore e servizi affidabili ai nostri clienti. Siamo specializzati nella produzione di farmaci da prescrizione e di prodotti OTC (over-the-counter) per il sollievo di malattie e sintomi comuni.
+Offriamo anche consulenza farmaceutica ai nostri clienti per aiutarli a gestire la loro salute e benessere. Il nostro team di farmacisti altamente qualificati è sempre disponibile per fornire informazioni sul dosaggio, le interazioni farmacologiche e gli effetti collaterali dei nostri prodotti.
+La nostra gamma di prodotti comprende farmaci per il trattamento di una vasta gamma di condizioni mediche, tra cui malattie cardiovascolari, diabete, problemi di salute mentale, dolori muscolari e articolari, allergie e molti altri. Siamo in costante evoluzione e ricerchiamo nuovi prodotti e terapie per migliorare la salute dei nostri clienti.</p>
+<p>Ci impegniamo a fornire ai nostri clienti un servizio rapido e affidabile. Offriamo la spedizione gratuita in tutto il paese e forniamo il nostro supporto ai clienti 24 ore su 24, 7 giorni su 7 tramite il nostro servizio clienti dedicato. Siamo inoltre in grado di fornire ai nostri clienti un servizio di consegna rapida e affidabile tramite il nostro partner di spedizioni.
+La nostra azienda è impegnata a garantire la qualità e la sicurezza dei nostri prodotti. Tutti i nostri prodotti sono conformi alle normative vigenti e sono soggetti a rigorosi controlli di qualità prima di essere distribuiti.
+Ci impegniamo anche a ridurre l'impatto ambientale della nostra attività, adottando pratiche di produzione e distribuzione sostenibili.
+ </p>
+ <p>Grazie per aver scelto Farmaci come tuo fornitore di farmaci. Siamo orgogliosi di aiutare le persone a vivere una vita più sana e felice.
+ </p>
+</article>
+
+<div>
+<p> Siamo a tua disposizione per qualsiasi informazione. <a href="#">  Compila il modulo di contatto </a>
+    Telefona al
+    numero
+    <span (click)="chiama();">{{contatto}}</span> <a href="/src/app/contatti/contatti.component.html"> myfarmacia@gmail.com</a></p>
+</div>
+
+
+
+
+
+

@@ -1,0 +1,14 @@
+.header {
+    background-color: yellow;
+    text-align: center;
+    font-weight: bold;
+}
+
+.form {
+    width: 1000px;
+    height: 300px;
+}
+
+.cognome {
+    background-color: yellow;
+}

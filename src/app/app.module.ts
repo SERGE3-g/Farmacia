@@ -23,6 +23,8 @@ import { CercaProdottoVendutoComponent } from './cerca-prodotto-venduto/cerca-pr
 import { VisualizzaProdottoVendutoComponent } from './visualizza-prodotto-venduto/visualizza-prodotto-venduto.component';
 import { InserisciProdottoVendutoComponent } from './inserisci-prodotto-venduto/inserisci-prodotto-venduto.component';
 import { AboutComponent } from './about/about.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormComponent } from './about/form/form.component';
 
 @NgModule({
   declarations: [
@@ -45,12 +47,14 @@ import { AboutComponent } from './about/about.component';
     CercaProdottoVendutoComponent,
     VisualizzaProdottoVendutoComponent,
     InserisciProdottoVendutoComponent,
-    AboutComponent
+    AboutComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,1 +1,75 @@
-<p>inserisci-prodotto works!</p>
+<section>
+  <form
+  class="row g-3"
+   (ngSubmit)="inviaDati('')">
+    <div class=" col-lg-6">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="nome" placeholder="Nome" formControlName="nomeForm">
+    </div>
+    <div class="col-lg-6">
+      <label for="prezzo" class="form-label">Prezzo</label>
+      <input type="number" class="form-control" id="prezzo" placeholder="Prezzo" formControlPrezzo="prezzoForm">
+    </div>
+    <div class="col-lg-6">
+      <label for="quantita" class="form-label">Quantità</label>
+      <input type="number" class="form-control" id="quantita" placeholder="Quantità" formControlQuantita="quantitaForm">
+    </div>
+    <div class="col-lg-6">
+      <label for="categoria" class="form-label">Categoria</label>
+      <select class="form-select" id="categoria" formControlCategoria="categoriaForm">
+        <option *ngFor="let categoria of categoria" >{{categoria}}</option>
+      </select>
+      <div class="col-lg-6">
+        <label for="descrizione" class="form-label">Descrizione</label>
+        <textarea class="form-control" id="descrizione" rows="3" formControlDescrizione="descrizione"></textarea>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Inserisci</button>
+      </div>
+    </div>
+  </form>
+  <!--init Modal-->
+
+    <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Info</h4>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="modal.dismiss()"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <h5>Inserito il seguente Artista</h5>
+      <ul class="list-group">
+        <li class="list-group-item">ID: {{ prodottoInserito.id }}</li>
+        <li class="list-group-item">Nome: {{ prodottoInserito.nome }}</li>
+        <li class="list-group-item">CATEGORIA: {{ prodottoInserito.nazione }}</li>
+        <li class="list-group-item">
+          PREZZO: {{ prodottoInserito.prezzo }}
+        </li>
+        <li class="list-group-item">
+          QUANTITA: {{ prodottoInserito.quantita}}
+        </li>
+        <li class="list-group-item">
+          DESCRIZIONE: {{ prodottoInserito.descrizione }}
+        </li>
+      </ul>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        (click)="modal.close()"
+      >
+        Close
+      </button>
+    </div>
+  </ng-template>
+  <!--end Modal-->
+</section>
+
+
+
+
