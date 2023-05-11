@@ -16,12 +16,14 @@ import { InserisciProdottoVendutoComponent } from './inserisci-prodotto-venduto/
 import { VisualizzaProdottoVendutoComponent } from './visualizza-prodotto-venduto/visualizza-prodotto-venduto.component';
 import { CercaProdottoVendutoComponent } from './cerca-prodotto-venduto/cerca-prodotto-venduto.component';
 import { DoveInfoComponent } from './dove-info/dove-info.component';
+import { CalcolatriceComponent } from './calcolatrice/calcolatrice.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
   {path:'about', component:AboutComponent},
   {path:'contatti',component: ContattiComponent},
   {path:'dove-info',component:DoveInfoComponent},
+  {path:'calcolatrice',component:CalcolatriceComponent},
   {path:'inserisci-cliente',component:InserisciClienteComponent},
   {path:'visualizza-cliente',component:VisualizzaClienteComponent},
   {path:'cerca-cliente',component:CercaClienteComponent},

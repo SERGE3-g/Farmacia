@@ -25,6 +25,7 @@ import { InserisciProdottoVendutoComponent } from './inserisci-prodotto-venduto/
 import { AboutComponent } from './about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponent } from './about/form/form.component';
+import { CalcolatriceComponent } from './calcolatrice/calcolatrice.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { FormComponent } from './about/form/form.component';
     VisualizzaProdottoVendutoComponent,
     InserisciProdottoVendutoComponent,
     AboutComponent,
-    FormComponent
+    FormComponent,
+    CalcolatriceComponent
   ],
   imports: [
     BrowserModule,

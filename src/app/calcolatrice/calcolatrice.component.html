@@ -1,0 +1,42 @@
+
+
+<div class="container" >
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center">Calcolatrice</h1>
+    </div>
+  </div>
+  <div>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="numero1">Numero 1</label>
+          <input type="number" class="form-control" id="numero1" (ngModel)="numero1">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="form-group">
+          <label for="numero2">Numero 2</label>
+          <input type="number" class="form-control" id="numero2" (ngModel)="numero2">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <button class="btn btn-primary" (click)="somma()">Somma</button>
+        <button class="btn btn-primary" (click)="sottrazione()">Sottrazione</button>
+        <button class="btn btn-primary" (click)="moltiplicazione()">Moltiplicazione</button>
+        <button class="btn btn-primary" (click)="divisione()">Divisione</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <h3>Risultato: {{risultato}}</h3>
+      </div>
+    </div>
+</div>
+
+
+
