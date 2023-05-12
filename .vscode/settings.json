@@ -3,5 +3,10 @@
     "aiXcoder.showTrayIcon": true,
     "cSpell.words": [
         "prodotto"
-    ]
+    ],
+    "chatgpt.apiKey": "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",
+    "chatgpt.timeoutLength": 1500,
+    "chatgpt-ai.accessToken": "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",
+    "chatgpt-ai.apiKey": "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",
+    "chatgpt-ai.timeoutLength": 1500
 }
