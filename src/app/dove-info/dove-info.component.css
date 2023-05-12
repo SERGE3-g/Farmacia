@@ -1,0 +1,135 @@
+
+/* Stili per la sezione */
+section {
+  padding: 20px;
+}
+
+/* Stili per il titolo */
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Stili per il contenitore */
+.container {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Stili per il testo principale */
+p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Stili per i sottotitoli */
+h2, h3 {
+  font-size: 20px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Stili per le liste */
+ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Stili per i link */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Stili per il separatore */
+hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 0;
+  border-top: 1px solid #ccc;
+}
+
+/* Stili per la sezione del footer */
+.footer {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+/* Stili per il contenitore del footer */
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Stili per le righe del footer */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Stili per le colonne del footer */
+.col-md-4 {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+}
+
+/* Stili per le caselle del footer */
+.footer-box {
+  margin-bottom: 20px;
+}
+
+/* Stili per l'immagine del footer */
+.footer-box img {
+  width: 50px;
+  max-width: 200px;
+  height: auto;
+}
+
+/* Stili per il testo del footer */
+p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Stili per il testo del sottotitolo del footer */
+h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Stili per i punti elenco del footer */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Stili per gli elementi del punti elenco del footer */
+ul li {
+  margin-bottom: 5px;
+}
+
+/* Stili per l'icona del footer */
+i.fa {
+  margin-right: 5px;
+}
+
+/* Stili per il testo del copyright */
+.pull-left {
+  text-align: left;
+}
+
+.pull-right {
+  text-align: right;
+}

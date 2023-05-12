@@ -1,1 +1,97 @@
-<p>inserisci-cliente works!</p>
+
+<section>
+<app-comp-title [titoloChild]="titoloParent"></app-comp-title>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <!-- class="col-lg-6" ({[(ngModel)]="clienteForm"}) (ngSubmit)="inviaDati()"-->
+      <form >
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" class="form-control" id="nome" placeholder="Nome">
+        </div>
+        <div class="form-group">
+          <label for="cognome">Cognome</label>
+          <input type="text" class="form-control" id="cognome" placeholder="Cognome">
+        </div>
+        <div class="form-group">
+          <label for="indirizzo">Indirizzo</label>
+          <input type="text" class="form-control" id="indirizzo" placeholder="Indirizzo">
+        </div>
+        <div class="form-group">
+          <label for="citta">Città</label>
+          <input type="text" class="form-control" id="citta" placeholder="Città">
+        </div>
+        <div class="form-group">
+          <label for="cap">CAP</label>
+          <input type="text" class="form-control" id="cap" placeholder="CAP">
+        </div>
+        <div class="form-group">
+          <label for="provincia">Provincia</label>
+          <input type="text" class="form-control" id="provincia" placeholder="Provincia">
+        </div>
+        <div class="form-group">
+          <label for="telefono">Telefono</label>
+          <input type="text" class="form-control" id="telefono" placeholder="Telefono">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" id="email" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <label for="codiceFiscale">Codice Fiscale</label>
+          <input type="text" class="form-control" id="codiceFiscale" placeholder="Codice Fiscale">
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="text" class="form-control" id="age" placeholder="age">
+        </div>
+        <div class="form-group">
+          <label for="note">Note</label>
+          <textarea class="form-control" id="note" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Inserisci</button>
+      </form>
+    </div>
+  </div>
+</div>
+</section>
+
+<br> <br> <br> <br> <br> <br>
+<hr>
+<section class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 footer-box">
+        <img src="assets/image/farm.jpg" alt="logo">
+        <p>
+          La nostra farmacia offre una vasta gamma di prodotti e servizi per la tua salute e il tuo benessere.
+        </p>
+      </div>
+      <div class="col-md-4 footer-box">
+        <p><b>CONTATTI</b></p>
+        <p><i class="fa fa-map-marker"></i> Via virgilio, 19 - 04023 Formia</p>
+        <p><i class="fa fa-phone"></i> +39 123456789</p>
+        <p><i class="fa fa-envelope-o"></i> gueaserge2@gmail.com</p>
+      </div>
+      <div class="col-md-4 footer-box">
+        <p><b>SOCIAL</b></p>
+        <p><i class="fa fa-facebook-official"></i> Facebook</p>
+        <p><i class="fa fa-twitter"></i> Twitter</p>
+        <p><i class="fa fa-linkedin"></i> Linkedin</p>
+        <p><i class="fa fa-instagram"></i> Instagram</p>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12">
+        <p class="text-center">
+          <b>© 2023 Farmacia</b>   | Tutti i diritti riservati |
+          <b class="fa-pull-right">Design by </b><a href="http://www.google.it">Guea Serge</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+

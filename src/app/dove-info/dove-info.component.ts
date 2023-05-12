@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./dove-info.component.css']
 })
 export class DoveInfoComponent {
+titoloParent = ' Scopri Dove siamo ';
 
 }
