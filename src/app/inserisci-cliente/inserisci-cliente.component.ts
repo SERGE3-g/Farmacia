@@ -12,8 +12,11 @@ export class InserisciClienteComponent {
 // creo un array di stringhe che contiene i nomi dei campi del form
 titoloParent='Inserisci Cliente';
 cliente =['id','nome','cognome', 'codicefiscale','age' ,'telefono','email','indirizzo','citta','cap','provincia','stato'];
-Nazione =['Italia','Francia','Costa D\'Avorio','Germania','Spagna','Portogallo','Svizzera','Austria','Belgio','Olanda','Lussemburgo','Regno Unito','Irlanda','Svezia','Danimarca','Finlandia','Norvegia','Grecia','Polonia','Romania',
-'Albania','Malta','Cipro','Turchia','Georgia','Armenia','Azerbaigian','Kazakistan','Uzbekistan','Tagikistan','Turkmenistan','Afghanistan','Pakistan','India','Nepal','Bhutan','Bangladesh','Sri Lanka','Maldive','Cina','Giappone',
+Nazione =['Italia','Francia','Costa D\'Avorio','Germania','Spagna','Portogallo','Svizzera','Austria','Belgio','Olanda','Lussemburgo','Regno Unito',
+'Irlanda','Svezia','Danimarca','Finlandia','Norvegia','Grecia','Polonia','Romania',
+'Albania','Malta','Cipro','Turchia','Georgia','Armenia','Azerbaigian',
+'Kazakistan','Uzbekistan','Tagikistan','Turkmenistan','Afghanistan','Pakistan','India','Nepal',
+'Bhutan','Bangladesh','Sri Lanka','Maldive','Cina','Giappone',
 ];
 
 
@@ -43,8 +46,8 @@ inviaDati(){
     nome: datiCliente.nomeForm,
     cognome: datiCliente.cognomeForm,
     codicefiscale: datiCliente.codicefiscaleForm,
-    age: Number(datiCliente.ageForm ),
-    telefono: Number (datiCliente.telefonoForm),
+    age: Number(datiCliente.ageForm!),
+    telefono: Number (datiCliente.telefonoForm!),
     email: datiCliente.emailForm,
     indirizzo: datiCliente.indirizzoForm,
     citta: datiCliente.cittaForm,
