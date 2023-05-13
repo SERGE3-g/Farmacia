@@ -1,70 +1,69 @@
-
 <section>
-<app-comp-title [titoloChild]="titoloParent"></app-comp-title>
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <!-- class="col-lg-6" ({[(ngModel)]="clienteForm"}) (ngSubmit)="inviaDati()"
+  <!-- class="col-lg-6" ({[(ngModel)]="clienteForm"}) (ngSubmit)="inviaDati()"
 
-       <form #clienteForm="ngForm"  (ngSubmit)="onSubmit(clienteForm)" (ngSubmit)="inviaDati()">
+       <form #clienteForm="ngForm"  (ngSubmit)="onSubmit(clienteForm)" (ngSubmit)="inviaDati()"> -->
 
-      -->
-      <form #clienteForm="ngForm"  (ngSubmit)="onSubmit(clienteForm)" (ngSubmit)="inviaDati()">
-        <div class="form-group">
-          <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" placeholder="Nome" ngModel required >
-        </div>
-        <div class="form-group">
-          <label for="cognome">Cognome</label>
-          <input type="text" class="form-control" id="cognome" placeholder="Cognome" ngModel required >
-        </div>
-        <div class="form-group">
-          <label for="indirizzo">Indirizzo</label>
-          <input type="text" class="form-control" id="indirizzo" placeholder="Indirizzo" ngModel required>
-        </div>
-        <div class="form-group">
-          <label for="citta">Città</label>
-          <input type="text" class="form-control" id="citta" placeholder="Città" ngModel required>
-        </div>
-        <div class="form-group">
-          <label for="cap">CAP</label>
-          <input type="text" class="form-control" id="cap" placeholder="CAP" ngModel required>
-        </div>
-        <div class="form-group">
-          <label for="provincia">Provincia</label>
-          <input type="text" class="form-control" id="provincia" placeholder="Provincia"  ngModel required>
-        </div>
+  <app-comp-title [titoloChild]="titoloParent"></app-comp-title>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1>Inserisci Cliente</h1>
+        <form (submit)="submitForm()" >
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="nome" placeholder="Nome" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="cognome">Cognome</label>
+            <input type="text" class="form-control" id="cognome" placeholder="Cognome" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="indirizzo">Indirizzo</label>
+            <input type="text" class="form-control" id="indirizzo" placeholder="Indirizzo" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="citta">Città</label>
+            <input type="text" class="form-control" id="citta" placeholder="Città" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="cap">CAP</label>
+            <input type="text" class="form-control" id="cap" placeholder="CAP" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="provincia">Provincia</label>
+            <input type="text" class="form-control" id="provincia" placeholder="Provincia" ngModel required>
+          </div>
 
-        <div class="form-group">
-          <label for="provincia">Stato</label>
-          <select class="form-select" id="nazione" formControlNazione="nazioneForm">
-            <option *ngFor="let nazione of Nazione" >{{Nazione}}</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="telefono">Telefono</label>
-          <input type="text" class="form-control" id="telefono" placeholder="Telefono" ngModel required >
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="text" class="form-control" id="email" placeholder="Email"  ngModel required>
-        </div>
-        <div class="form-group">
-          <label for="codiceFiscale">Codice Fiscale</label>
-          <input type="text" class="form-control" id="codiceFiscale" placeholder="Codice Fiscale" ngModel required>
-        </div>
-        <div class="form-group">
-          <label for="age">Age</label>
-          <input type="text" class="form-control" id="age" placeholder="age" ngModel required>
-        </div>
-        <div class="form-group">
-          <label for="note">Note</label>
-          <textarea class="form-control" id="note" rows="3"></textarea ngModel required>
+          <div class="form-group">
+            <label for="provincia">Stato</label>
+            <select class="form-select" id="nazione" formControlNazione="nazioneForm">
+              <option *ngFor="let nazione of Nazione">{{Nazione}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="telefono">Telefono</label>
+            <input type="text" class="form-control" id="telefono" placeholder="Telefono" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" class="form-control" id="email" placeholder="Email" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="codiceFiscale">Codice Fiscale</label>
+            <input type="text" class="form-control" id="codiceFiscale" placeholder="Codice Fiscale" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="text" class="form-control" id="age" placeholder="age" ngModel required>
+          </div>
+          <div class="form-group">
+            <label for="note">Note</label>
+            <textarea class="form-control" id="note" rows="3"></textarea ngModel required>
         </div>
         <button type="submit" class="btn btn-primary">Inserisci</button>
       </form>
 
-      <!--init Modal-->
+      <!--init Modal -->
     <ng-template #content let-modal>
       <div class="modal-header">
         <h4 class="modal-title" id="modal-basic-title">Info</h4>
@@ -89,6 +88,7 @@
           <li class="list-group-item">CITTA: {{ clienteInserito.citta }}</li>
           <li class="list-group-item">CAP: {{ clienteInserito.cap }}</li>
           <li class="list-group-item">PROVINCIA: {{ clienteInserito.provincia }}</li>
+          <li class="list-group-item">NAZIONE: {{ clienteInserito.nazione }}</li>
           <li class="list-group-item">NOTE: {{ clienteInserito.note }}</li>
         </ul>
       </div>
@@ -102,7 +102,7 @@
         </button>
       </div>
     </ng-template>
-    <!--end Modal-->
+     <!-- end Modal-->
     </div>
   </div>
 </div>
@@ -145,4 +145,6 @@
     </div>
   </div>
 </section>
-<!-- End footer-->
+
+
+

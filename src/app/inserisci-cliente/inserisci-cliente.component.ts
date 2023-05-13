@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, NgForm } from '@angular/forms';
+import { Cliente } from '../model/cliente';
 
 @Component({
   selector: 'app-inserisci-cliente',
@@ -7,12 +8,15 @@ import { FormControl, FormGroup, NgForm } from '@angular/forms';
   styleUrls: ['./inserisci-cliente.component.css']
 })
 export class InserisciClienteComponent {
+
 // creo un array di stringhe che contiene i nomi dei campi del form
 titoloParent='Inserisci Cliente';
 cliente =['id','nome','cognome', 'codicefiscale','age' ,'telefono','email','indirizzo','citta','cap','provincia','stato'];
 Nazione =['Italia','Francia','Costa D\'Avorio','Germania','Spagna','Portogallo','Svizzera','Austria','Belgio','Olanda','Lussemburgo','Regno Unito','Irlanda','Svezia','Danimarca','Finlandia','Norvegia','Grecia','Polonia','Romania',
 'Albania','Malta','Cipro','Turchia','Georgia','Armenia','Azerbaigian','Kazakistan','Uzbekistan','Tagikistan','Turkmenistan','Afghanistan','Pakistan','India','Nepal','Bhutan','Bangladesh','Sri Lanka','Maldive','Cina','Giappone',
 ];
+
+
 // creo un oggetto FormGroup che contiene tutti i FormControl
 clienteForm = new FormGroup({
   id: new FormControl(''),
@@ -82,6 +86,10 @@ inviaDati(){
   stampaValoriCampi(){
     console.log(this.clienteForm.value);
   }
+
+  submitForm() {
+    console.log(this.clienteForm.value);
+    }
 
 }
 
