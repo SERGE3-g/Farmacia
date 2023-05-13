@@ -4,59 +4,111 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <!-- class="col-lg-6" ({[(ngModel)]="clienteForm"}) (ngSubmit)="inviaDati()"-->
-      <form >
+      <!-- class="col-lg-6" ({[(ngModel)]="clienteForm"}) (ngSubmit)="inviaDati()"
+
+       <form #clienteForm="ngForm"  (ngSubmit)="onSubmit(clienteForm)" (ngSubmit)="inviaDati()">
+
+      -->
+      <form #clienteForm="ngForm"  (ngSubmit)="onSubmit(clienteForm)" (ngSubmit)="inviaDati()">
         <div class="form-group">
           <label for="nome">Nome</label>
-          <input type="text" class="form-control" id="nome" placeholder="Nome">
+          <input type="text" class="form-control" id="nome" placeholder="Nome" ngModel required >
         </div>
         <div class="form-group">
           <label for="cognome">Cognome</label>
-          <input type="text" class="form-control" id="cognome" placeholder="Cognome">
+          <input type="text" class="form-control" id="cognome" placeholder="Cognome" ngModel required >
         </div>
         <div class="form-group">
           <label for="indirizzo">Indirizzo</label>
-          <input type="text" class="form-control" id="indirizzo" placeholder="Indirizzo">
+          <input type="text" class="form-control" id="indirizzo" placeholder="Indirizzo" ngModel required>
         </div>
         <div class="form-group">
           <label for="citta">Città</label>
-          <input type="text" class="form-control" id="citta" placeholder="Città">
+          <input type="text" class="form-control" id="citta" placeholder="Città" ngModel required>
         </div>
         <div class="form-group">
           <label for="cap">CAP</label>
-          <input type="text" class="form-control" id="cap" placeholder="CAP">
+          <input type="text" class="form-control" id="cap" placeholder="CAP" ngModel required>
         </div>
         <div class="form-group">
           <label for="provincia">Provincia</label>
-          <input type="text" class="form-control" id="provincia" placeholder="Provincia">
+          <input type="text" class="form-control" id="provincia" placeholder="Provincia"  ngModel required>
+        </div>
+
+        <div class="form-group">
+          <label for="provincia">Stato</label>
+          <select class="form-select" id="nazione" formControlNazione="nazioneForm">
+            <option *ngFor="let nazione of Nazione" >{{Nazione}}</option>
+          </select>
         </div>
         <div class="form-group">
           <label for="telefono">Telefono</label>
-          <input type="text" class="form-control" id="telefono" placeholder="Telefono">
+          <input type="text" class="form-control" id="telefono" placeholder="Telefono" ngModel required >
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="text" class="form-control" id="email" placeholder="Email">
+          <input type="text" class="form-control" id="email" placeholder="Email"  ngModel required>
         </div>
         <div class="form-group">
           <label for="codiceFiscale">Codice Fiscale</label>
-          <input type="text" class="form-control" id="codiceFiscale" placeholder="Codice Fiscale">
+          <input type="text" class="form-control" id="codiceFiscale" placeholder="Codice Fiscale" ngModel required>
         </div>
         <div class="form-group">
           <label for="age">Age</label>
-          <input type="text" class="form-control" id="age" placeholder="age">
+          <input type="text" class="form-control" id="age" placeholder="age" ngModel required>
         </div>
         <div class="form-group">
           <label for="note">Note</label>
-          <textarea class="form-control" id="note" rows="3"></textarea>
+          <textarea class="form-control" id="note" rows="3"></textarea ngModel required>
         </div>
         <button type="submit" class="btn btn-primary">Inserisci</button>
       </form>
+
+      <!--init Modal-->
+    <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Info</h4>
+        <button
+          type="button"
+          class="btn-close"
+          aria-label="Close"
+          (click)="modal.dismiss()"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <h5>Inserito il seguente Cliente </h5>
+        <ul class="list-group">
+          <li class="list-group-item">ID: {{ clienteInserito.id }}</li>
+          <li class="list-group-item">Nome: {{ clienteInserito.nome }}</li>
+          <li class="list-group-item">COGNOME: {{ clienteInserito.cognome }}</li>
+          <li class="list-group-item">CODICE FISCALE: {{ clienteInserito.codicefiscale }}</li>
+          <li class="list-group-item">AGE: {{ clienteInserito.age }}</li>
+          <li class="list-group-item">TELEFONO: {{ clienteInserito.telefono }}</li>
+          <li class="list-group-item">EMAIL: {{ clienteInserito.email }}</li>
+          <li class="list-group-item">INDIRIZZO: {{ clienteInserito.indirizzo }}</li>
+          <li class="list-group-item">CITTA: {{ clienteInserito.citta }}</li>
+          <li class="list-group-item">CAP: {{ clienteInserito.cap }}</li>
+          <li class="list-group-item">PROVINCIA: {{ clienteInserito.provincia }}</li>
+          <li class="list-group-item">NOTE: {{ clienteInserito.note }}</li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-outline-dark"
+          (click)="modal.close()"
+        >
+          Close
+        </button>
+      </div>
+    </ng-template>
+    <!--end Modal-->
     </div>
   </div>
 </div>
 </section>
 
+<!-- Init footer-->
 <br> <br> <br> <br> <br> <br>
 <hr>
 <section class="footer">
@@ -87,11 +139,10 @@
       <div class="col-md-12">
         <p class="text-center">
           <b>© 2023 Farmacia</b>   | Tutti i diritti riservati |
-          <b class="fa-pull-right">Design by </b><a href="http://www.google.it">Guea Serge</a>
+          <b>Design by </b><a href="http://www.google.it">Guea Serge</a>
         </p>
       </div>
     </div>
   </div>
 </section>
-
-
+<!-- End footer-->
