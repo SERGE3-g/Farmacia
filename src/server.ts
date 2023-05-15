@@ -21,7 +21,7 @@ connection.connect((error: { stack: string; }) => {
 // Creazione dell'app Express
 const app = express();
 
-// Esempio di API per ottenere dati dal database
+
 app.get('/api/dati', (req: any, res: { status: (arg0: number) => { (): any; new(): any; send: { (arg0: string): void; new(): any; }; }; json: (arg0: any) => void; }) => {
   const query = 'SELECT * FROM cliente';
   connection.query(query, (error: { stack: string; }, results: any) => {
