@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ProdottiService } from '../services/prodotti.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Prodotto } from '../model/prodotto';
+import { Prodotto } from '../interface/prodotto';
 
 @Component({
   selector: 'app-inserisci-prodotto',
