@@ -1,0 +1,26 @@
+<style>
+  h1 {
+    text-align: center;
+
+  }
+  a {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+  }
+</style>
+<h1>User Management system</h1>
+<a href="#" (click)="newUser()">New User</a>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8">
+    <app-users (updateUser)="updateUser($event)"></app-users>
+  </div>
+  <div class="col-4" *ngIf="showForm">
+    <app-user-detail [user]="userSelected"></app-user-detail>
+  </div>
+</div>
+</div>

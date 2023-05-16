@@ -1,0 +1,21 @@
+<table>
+  <caption>{{title}}</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Cognome</th>
+      <th>Codicefiscale</th>
+      <th>province</th>
+      <th>city</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Age</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tr app-user *ngFor="let user of users" [user-data]="user"
+    (onSelectUser)="onSelectUser($event)"
+    (onCancellaUser)="onCancellaUser($event)">
+  </tr>
+</table>
+

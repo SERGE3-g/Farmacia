@@ -1,0 +1,32 @@
+td,
+th {
+  padding: 5px;
+  border: 1px solid #fff;
+}
+
+th {
+  background: #2faec7;
+  color: green;
+
+}
+
+td {
+  background-color: silver;
+  color: red;
+}
+
+button {
+  padding: 5px;
+  border: 1px solid #5bb3cb;
+  width: 80px;
+}
+
+button.cancella {
+  background: red;
+  color: #fff;
+ }
+
+button.update {
+  background: #26c76b;
+  color: #fff;
+}
