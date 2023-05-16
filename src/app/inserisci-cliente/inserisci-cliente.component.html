@@ -1,0 +1,218 @@
+<section>
+  <app-comp-title [titoloChild]="titoloParent"></app-comp-title>
+  <form
+    class="row g-3"
+    [formGroup]="clienteForm"
+    (ngSubmit)="inviaDati(content)"
+  >
+    <div class="col-lg-6">
+      <label for="nome" class="form-label">Nome</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        placeholder="Nome"
+        formControlName="nomeForm"
+      />
+    </div>
+    <div class="col-lg-6">
+      <label for="cognome" class="form-label">Cognome</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cognome"
+        placeholder="Cognome"
+        formControlName="cognomeForm"
+      />
+    </div>
+    <div class="col-lg-6">
+      <label for="dataNascita" class="form-label">Data di Nascita</label>
+      <input
+        type="date"
+        class="form-control"
+        id="dataNascita"
+        placeholder="Data di Nascita"
+        formControlName="dataNascitaForm"
+      />
+    </div>
+    <div class="col-lg-6">
+      <label for="luogoNascita" class="form-label">Luogo di Nascita</label>
+      <input
+        type="text"
+        class="form-control"
+        id="luogoNascita"
+        placeholder="Luogo di Nascita"
+        formControlName="luogoNascitaForm"
+      />
+    </div>
+    <div class="col-lg-6">
+      <label for="codiceFiscale" class="form-label">Codice Fiscale</label>
+      <input
+        type="text"
+        class="form-control"
+        id="codiceFiscale"
+        placeholder="Codice Fiscale"
+        formControlName="codiceFiscaleForm"
+      />
+    </div>
+    <div class="col-lg-6">
+      <label for="age" class="form-label">Age</label>
+      <input
+        type="text"
+        class="form-control"
+        id="age"
+        placeholder="Age"
+        formControlName="ageForm"
+      />
+    </div>
+    <div class="col-lg-6">
+      <label for="sesso" class="form-label">Sesso</label>
+      <input
+        type="text"
+        class="form-control"
+        id="sesso"
+        placeholder="Sesso"
+        formControlName="sessoForm"
+      />
+    </div>
+    <div class ="col-lg-6">
+      <label for="data di inserimento" class="form-label">Data di inserimento</label>
+      <input
+        type="date"
+        class="form-control"
+        id="data"
+        placeholder="Data"
+        formControlName="dataForm"
+      />
+    </div>
+    <div class="col-lg-6">
+      <label for="nota" class="form-label">nota</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nota"
+        placeholder="nota"
+        formControlName="notaForm"
+      />
+    </div>
+    <div class="col-lg-6">
+      <label for="email" class="form-label">Email</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="Email"
+        formControlName="emailForm"
+      />
+    </div>
+    <div class="col-lg-6">
+      <label for="telefono" class="form-label">Telefono</label>
+      <input
+        type="text"
+        class="form-control"
+        id="telefono"
+        placeholder="Telefono"
+        formControlName="telefonoForm"
+      />
+    </div>
+    <div class="col-lg-6">
+      <label for="indirizzo" class="form-label">Indirizzo</label>
+      <input
+        type="text"
+        class="form-control"
+        id="indirizzo"
+        placeholder="Indirizzo"
+        formControlName="indirizzoForm"
+      />
+    </div>
+    <div class="col-lg-6">
+      <label for="citta" class="form-label">Città</label>
+      <input
+        type="text"
+        class="form-control"
+        id="citta"
+        placeholder="Città"
+        formControlName="cittaForm"
+      />
+    </div>
+    <div class="col-lg-6">
+      <label for="cap" class="form-label">CAP</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cap"
+        placeholder="CAP"
+        formControlName="capForm"
+      />
+    </div>
+    <div class="col-lg-6">
+      <label for="provincia" class="form-label">Provincia</label>
+      <input
+        type="text"
+        class="form-control"
+        id="provincia"
+        placeholder="Provincia"
+        formControlName="provinciaForm"
+      />
+    </div>
+
+    <div class="col-lg-10">
+      <label for="nazione" class="form-label">Nazione</label>
+      <select class="form-select" id="nazione" formControlName="nazioneForm">
+        <option *ngFor="let nazione of nazione" [value]="nazione">
+          {{nazione}}
+        </option>
+      </select>
+    </div>
+    <div class="col-lg-12">
+      <button type="submit" class="btn btn-primary">Invia</button>
+    </div>
+  </form>
+
+  <!-- Modal -->
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Info</h4>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="modal.dismiss()"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <h5>Inserito il seguente Cliente</h5>
+      <div class="list-group">
+       <ul class="list-group">
+        <li class="list-group-item">ID: {{ clienteInserito.id }}</li>
+        <li class="list-group-item">Nome: {{ clienteInserito.nome }}</li>
+        <li class="list-group-item">Cognome: {{ clienteInserito.cognome }}</li>
+        <li class="list-group-item">Telefono: {{ clienteInserito.telefono }}</li>
+        <li class="list-group-item">Indirizzo: {{ clienteInserito.indirizzo }}</li>
+        <li class="list-group-item">Città: {{ clienteInserito.citta }}</li>
+        <li class="list-group-item">CAP: {{ clienteInserito.cap }}</li>
+        <li class="list-group-item">Provincia: {{ clienteInserito.provincia }}</li>
+        <li class="list-group-item">Data di Nascita: {{ clienteInserito.dataNascita }}</li>
+        <li class="list-group-item">Luogo di Nascita: {{ clienteInserito.luogoNascita }}</li>
+        <li class="list-group-item">Codice Fiscale: {{ clienteInserito.codiceFiscale }}</li>
+        <li class="list-group-item">Age: {{ clienteInserito.age }}</li>
+        <li class="list-group-item">Sesso: {{ clienteInserito.sesso }}</li>
+        <li class="list-group-item">Email: {{ clienteInserito.email }}</li>
+        <li class="list-group-item">Nazione: {{ clienteInserito.nazione }}</li>
+        <li class="list-group-item">Nota: {{ clienteInserito.nota }}</li>
+        <li class="list-group-item">Data: {{ clienteInserito.data }}</li>
+      </ul>
+    </div>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        (click)="modal.close()"
+      >
+        Close
+      </button>
+    </div>
+  </ng-template>
+
+</section>

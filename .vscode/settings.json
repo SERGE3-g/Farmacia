@@ -2,6 +2,7 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "aiXcoder.showTrayIcon": true,
     "cSpell.words": [
+        "cliente",
         "prodotto"
     ],
     "chatgpt.apiKey": "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",
