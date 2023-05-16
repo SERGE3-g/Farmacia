@@ -8,7 +8,7 @@ export const environment = {
       projectId: "farmacia-1e1e1e",
       storageBucket: "gs://farmacia-d3a82.appspot.com",
       messagingSenderId: "1e1e1e1e1e1e1e1e1e1e1e1e1e1e1e",
-      appId: "1:1073741824:web:1e1e1e1e1e1e1e1e1e1e1e",
+      appId: "269912894599-oahk25998630slcd1nf43f8qejkoef6r.apps.googleusercontent.com",
 
 
 
