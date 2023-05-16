@@ -26,6 +26,7 @@ import { AboutComponent } from './about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponent } from './about/form/form.component';
 import { CalcolatriceComponent } from './calcolatrice/calcolatrice.component';
+import { DatabaseService } from './services/database.service';
 
 @NgModule({
   declarations: [
@@ -56,9 +57,9 @@ import { CalcolatriceComponent } from './calcolatrice/calcolatrice.component';
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [DatabaseService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
