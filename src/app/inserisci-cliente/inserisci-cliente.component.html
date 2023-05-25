@@ -1,8 +1,10 @@
 <section>
   <app-comp-title [titoloChild]="titoloParent"></app-comp-title>
+  
+  <!-- [formGroup]="clienteForm" -->
   <form
     class="row g-3"
-    [formGroup]="clienteForm"
+    
     (ngSubmit)="inviaDati(content)"
   >
     <div class="col-lg-6">

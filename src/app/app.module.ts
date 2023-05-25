@@ -27,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponent } from './about/form/form.component';
 import { CalcolatriceComponent } from './calcolatrice/calcolatrice.component';
 import { DatabaseService } from './services/database.service';
+import { ListaProVendComponent } from './lista-pro-vend/lista-pro-vend.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { DatabaseService } from './services/database.service';
     InserisciProdottoVendutoComponent,
     AboutComponent,
     FormComponent,
-    CalcolatriceComponent
+    CalcolatriceComponent,
+    ListaProVendComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +61,7 @@ import { DatabaseService } from './services/database.service';
     NgbModule,
     BrowserAnimationsModule,
   ],
-  providers: [DatabaseService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
