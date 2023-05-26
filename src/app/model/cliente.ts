@@ -5,14 +5,14 @@ export class Cliente {
     codicefiscale: string;
     age: number;
     email: string;
-    telefono: string;
+    telefono: number;
     indirizzo: string;
     citta: string;
     cap: string;
     provincia: string;
     note: string;
     data: string;
-    constructor(id: number, nome: string, cognome: string, codicefiscale: string, age: number  ,email: string, telefono: string, indirizzo: string, citta: string, cap: string, provincia: string, note: string, data: string) {
+    constructor(id: number, nome: string, cognome: string, codicefiscale: string, age: number  ,email: string, telefono: number, indirizzo: string, citta: string, cap: string, provincia: string, note: string, data: string) {
         this.id = id;
         this.nome = nome;
         this.cognome = cognome;

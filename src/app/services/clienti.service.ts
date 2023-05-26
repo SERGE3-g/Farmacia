@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ClientiService {
+  [x: string]: any;
 
   readonly url: string = "http://localhost:3000/clients";
 

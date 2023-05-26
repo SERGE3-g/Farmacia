@@ -28,6 +28,7 @@ import { FormComponent } from './about/form/form.component';
 import { CalcolatriceComponent } from './calcolatrice/calcolatrice.component';
 import { DatabaseService } from './services/database.service';
 import { ListaProVendComponent } from './lista-pro-vend/lista-pro-vend.component';
+import { FarmaciaComunaleComponent } from './farmacia-comunale/farmacia-comunale.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ListaProVendComponent } from './lista-pro-vend/lista-pro-vend.component
     AboutComponent,
     FormComponent,
     CalcolatriceComponent,
-    ListaProVendComponent
+    ListaProVendComponent,
+    FarmaciaComunaleComponent
   ],
   imports: [
     BrowserModule,
@@ -64,4 +66,11 @@ import { ListaProVendComponent } from './lista-pro-vend/lista-pro-vend.component
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+  
+  constructor() {
+    console.log('AppModule');
+  }
+
+
+}
