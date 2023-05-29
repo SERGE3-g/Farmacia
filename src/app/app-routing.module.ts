@@ -18,6 +18,8 @@ import { CercaProdottoVendutoComponent } from './cerca-prodotto-venduto/cerca-pr
 import { DoveInfoComponent } from './dove-info/dove-info.component';
 import { CalcolatriceComponent } from './calcolatrice/calcolatrice.component';
 import { FarmaciaComunaleComponent } from './farmacia-comunale/farmacia-comunale.component';
+import { ListaProVendComponent } from './lista-pro-vend/lista-pro-vend.component';
+import { MappaComponent } from './mappa/mappa.component';
 
 const routes: Routes = [
   {path:'home',component:HomeComponent},
@@ -37,7 +39,9 @@ const routes: Routes = [
   {path:'inserisci-prodotto-venduto',component:InserisciProdottoVendutoComponent},
   {path:'visualizza-prodotto-venduto',component:VisualizzaProdottoVendutoComponent},
   { path: 'cerca-prodotto-venduto', component: CercaProdottoVendutoComponent },
-  {path:'farmacia-comunale', component:FarmaciaComunaleComponent},
+  { path: 'farmacia-comunale', component: FarmaciaComunaleComponent },
+  { path: 'lista-pro-vend', component: ListaProVendComponent },
+  {path:'mappa',component:MappaComponent},
   {path:'',redirectTo:'home',pathMatch:'full'},
 ];
 

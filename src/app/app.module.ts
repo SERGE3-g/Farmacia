@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { AgmCoreModule } from '@agm/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,6 +30,8 @@ import { CalcolatriceComponent } from './calcolatrice/calcolatrice.component';
 import { DatabaseService } from './services/database.service';
 import { ListaProVendComponent } from './lista-pro-vend/lista-pro-vend.component';
 import { FarmaciaComunaleComponent } from './farmacia-comunale/farmacia-comunale.component';
+import { MappaComponent } from './mappa/mappa.component';
+
 
 @NgModule({
   declarations: [
@@ -55,22 +58,25 @@ import { FarmaciaComunaleComponent } from './farmacia-comunale/farmacia-comunale
     FormComponent,
     CalcolatriceComponent,
     ListaProVendComponent,
-    FarmaciaComunaleComponent
+    FarmaciaComunaleComponent,
+    MappaComponent,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDGTNsTjWntTR3DeBg5rpN4PDFZguIppGI'
+    })
   ],
+  
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
+  
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [DatabaseService],
+  declarations: [ AppComponent ],
+  bootstrap: [ AppComponent ],
+  
 })
 export class AppModule {
-  
-  constructor() {
-    console.log('AppModule');
-  }
-
 
 }
