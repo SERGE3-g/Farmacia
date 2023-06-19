@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { AgmCoreModule } from '@agm/core';
+//import { AgmCoreModule } from '@agm/core';
+
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,7 +28,7 @@ import { AboutComponent } from './about/about.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormComponent } from './about/form/form.component';
 import { CalcolatriceComponent } from './calcolatrice/calcolatrice.component';
-import { DatabaseService } from './services/database.service';
+//import { DatabaseService } from './services/database.service';
 import { ListaProVendComponent } from './lista-pro-vend/lista-pro-vend.component';
 import { FarmaciaComunaleComponent } from './farmacia-comunale/farmacia-comunale.component';
 import { MappaComponent } from './mappa/mappa.component';
@@ -60,9 +61,9 @@ import { MappaComponent } from './mappa/mappa.component';
     ListaProVendComponent,
     FarmaciaComunaleComponent,
     MappaComponent,
-    AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyDGTNsTjWntTR3DeBg5rpN4PDFZguIppGI'
-    })
+    //AgmCoreModule.forRoot({
+     // apiKey: 'AIzaSyDGTNsTjWntTR3DeBg5rpN4PDFZguIppGI'
+   // })
   ],
   
   imports: [
@@ -72,8 +73,8 @@ import { MappaComponent } from './mappa/mappa.component';
     BrowserAnimationsModule,
   
   ],
-  providers: [DatabaseService],
-  declarations: [ AppComponent ],
+  providers: [],
+  //declarations: [AppComponent ],
   bootstrap: [ AppComponent ],
   
 })
